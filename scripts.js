@@ -89,6 +89,37 @@ switch(result) {
         break
 
     case 5:
+
+        a = 1355
+
+        b = 5.45
+
+        c = 37
+
+        while(c != 0)
+        {
+            while((b % 1 !== 0) | (b == NaN)){
+                b = prompt("Введите число")
+                b = +b
+            }
+            
+            c = b - a
+
+            if(c > 0){
+                console.log("ваше число больше")
+            }
+            if(c < 0){
+                console.log("ваше число меньше")
+            }
+        }
+
+        console.log("Угадано")
+        
+
+        break
+        
+
+    case 6:
         
         n = 0
         x = 0
