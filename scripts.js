@@ -96,14 +96,11 @@ switch(result) {
 
         c = 37
 
-        while(c != 0)
-        {
-            while((b % 1 !== 0) | (b == NaN)){
-                b = prompt("Введите число")
-                b = +b
-            }
-            
-            c = b - a
+        do{
+            b = prompt("Введите число")
+            b = +b
+
+            c = b - a;
 
             if(c > 0){
                 console.log("ваше число больше")
@@ -111,7 +108,8 @@ switch(result) {
             if(c < 0){
                 console.log("ваше число меньше")
             }
-        }
+        } while(c !== 0)
+
 
         console.log("Угадано")
         
