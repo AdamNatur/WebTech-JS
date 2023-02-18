@@ -1,6 +1,5 @@
 
-
-result = prompt("Номер задачи");
+result = prompt(`Номер задачи`);
 result = +result;
 
 switch(result) {
@@ -8,17 +7,17 @@ switch(result) {
         first_velocity = 36;
         second_velocity = first_velocity*1000/3600;
         
-        console.log(first_velocity + " км/ч соответствует " + second_velocity + " м/с.")
+        console.log(`${first_velocity} + км/ч соответствует  + ${second_velocity} +  м/с.`)
         
         first_velocity = 20;
         second_velocity = first_velocity/1000*3600;
-        console.log(first_velocity + " м/с соответствует " + second_velocity + " км/ч.")
+        console.log(`${first_velocity} +  м/с соответствует  + ${second_velocity} + км/ч.`)
         break
   
     case 2: 
-      a = prompt("AB")
-      b = prompt("BC")
-      c = prompt("AC")
+      a = prompt(`AB`)
+      b = prompt(`BC`)
+      c = prompt(`AC`)
 
       a = +a;
       b = +b;
@@ -27,13 +26,13 @@ switch(result) {
       p = a+b+c;
 
       if (((a+b)>c) * ((c+b)>a) * ((a+c)>b)){
-        console.log("треугольник существует")
-        console.log("периметр = "+ p )
-        console.log("площадь = " + Math.sqrt(p*(p-a)*(p-b)*(p-c)))
-        console.log("соотношение = " + p/Math.sqrt(p*(p-a)*(p-b)*(p-c)))
+        console.log(`треугольник существует`)
+        console.log(`периметр = ${p}`)
+        console.log(`площадь = ${Math.sqrt(p*(p-a)*(p-b)*(p-c))}`)
+        console.log(`соотношение = ${p/Math.sqrt(p*(p-a)*(p-b)*(p-c))}`)
         }
     else{
-        console.log("треугольник не существует")
+        console.log(`треугольник не существует`)
     }
       break
 
@@ -41,7 +40,7 @@ switch(result) {
         number = 1.2;
         while((number % 1) > 0 | (number === NaN))
         {
-            value = prompt("Введите число")
+            value = prompt(`Введите число`)
             number = +value;
         }
 
@@ -51,13 +50,13 @@ switch(result) {
 
             if (((i % 5) === 0) & (i!==0))
             {
-                console.log(i + " fizz buzz")
+                console.log(`${i} + fizz buzz`)
             }
             if(i % 2 != 0){
-                console.log(i + " buzz")
+                console.log(`${i} + buzz`)
             }
             else{
-                console.log(i + " fizz")
+                console.log(`${i} + fizz`)
             }
 
             i++
@@ -67,23 +66,23 @@ switch(result) {
     
     case 4:
 
-        string = "";
+        string = ``;
         for(i = 1; i <= 12; i++){
 
             if(i % 2 === 0){
                 for(k = 1; k <= i; k++){
-                    string +="#";
+                    string +=`#`;
                 }
-                string +="\n"; 
+                string +=`\n`; 
             }
             else{
                 for(k = 1; k <= i; k++){
-                    string +="*";
+                    string +=`*`;
                 }
-                string +="\n"; 
+                string +=`\n`; 
             }
         }  
-        string += "||"
+        string += `||`
         console.log(string)  
 
         break
@@ -97,21 +96,21 @@ switch(result) {
         c = 37
 
         do{
-            b = prompt("Введите число")
+            b = prompt(`Введите число`)
             b = +b
 
             c = b - a;
 
             if(c > 0){
-                console.log("ваше число больше")
+                console.log(`ваше число больше`)
             }
             if(c < 0){
-                console.log("ваше число меньше")
+                console.log(`ваше число меньше`)
             }
         } while(c !== 0)
 
 
-        console.log("Угадано")
+        console.log(`Угадано`)
         
 
         break
@@ -125,10 +124,10 @@ switch(result) {
 
         while(x*y*n <= 0)
         {
-            alert("Введите целые числа")
-            n = prompt("Число")
-            x = prompt("Возможный делитель 1")
-            y = prompt("Возможный делитель 2")
+            alert(`Введите целые числа`)
+            n = prompt(`Число`)
+            x = prompt(`Возможный делитель 1`)
+            y = prompt(`Возможный делитель 2`)
             n = +n
             x = +x
             y = +y
@@ -137,11 +136,11 @@ switch(result) {
         if ((n % x === 0) & (n % y === 0)){
 
             check = true;
-            console.log("n = " + n + ", x = " + x + ", y = " + y + " = " + check)
+            console.log(`n =  ${n}, x =  ${x}, y =  ${y} = ${check}`)
         }
         else{
             check = false;
-            console.log("n = " + n + ", x = " + x + ", y = " + y + " = " + check)
+            console.log(`n =  ${n}, x = ${x}, y = ${y} =  ${check}`)
         }
 
         break;
@@ -152,8 +151,8 @@ switch(result) {
 
         while(month < 1 | month > 12 | month === NaN)
         {
-            alert("Задайте число от 1 до 12")
-            month = prompt("Номер месяца")
+            alert(`Задайте число от 1 до 12`)
+            month = prompt(`Номер месяца`)
             month = +month
         }
 
@@ -170,12 +169,12 @@ switch(result) {
             quarter = 4;
         }
 
-        console.log("месяц " + month + " => " + quarter + " квартал ")
+        console.log(`месяц + ${month} +  =>  + ${quarter} +  квартал `)
 
         break
 
     default:
-        result = prompt("Номер задачи", '');
+        result = prompt(`Номер задачи`, '');
       break
   }
 
