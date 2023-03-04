@@ -21,8 +21,12 @@ function convertSpeed(speed, convert){
 
 
 function absValue(value){
+{
+    if(value < 0){
+        value = -value;
+    }
 
-    return -value;
+    return value
 }
 
 function randomNumber(min, max){
