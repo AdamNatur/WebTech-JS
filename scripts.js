@@ -1,6 +1,5 @@
 
-result = prompt(`Номер задачи`);
-result = +result;
+result = +prompt(`Номер задачи`);
 
 switch(result) {
     case 1: 

@@ -1,6 +1,9 @@
 
-result= prompt(`Введите номер задачи`)
-result = +result;
+result= +prompt(`Введите номер задачи`)
+
+
+let old_speed
+let convert
 
 function convertSpeed(speed, convert){
 
@@ -13,55 +16,57 @@ function convertSpeed(speed, convert){
         speed = speed/1000*3600;
     }
 
-    console.log(`convertSpeed(${old_speed}, 'toMS') -> ${speed}`)
+    return speed; 
 }
+
 
 function absValue(value){
 
-    let old_value = value;
-
-    if(value < 0){
-        value *=-1;
-    }
-
-    console.log(`absValue(${old_value}) -> ${value}`)
+    return -value;
 }
 
 function randomNumber(min, max){
-    console.log(`randomNumber(${min}, ${max}) -> ${Math.trunc(Math.random() * (max - min) + min)}`);
+
+    return Math.floor(Math.random() * (max - min) + min)
 }
 
-function randomArray(array, count)
-    {
-        random_array = [count];
-        if(count <= array.length){
-            for(k = 0; k < count; k++){
+function randomArray(array, count){
+    const random_array = [count];
 
-                random_array[k] = array[Math.trunc(Math.random()*array.length)];
-                index = Math.random()*array.length;
+    let index;
+    let old_index = -1
+
+    if(count <= array.length){
+        for(k = 0; k < count; k++){
+            index = Math.floor(Math.random()*array.length)
+            if (old_index != index)
+            {
+                random_array[k] = array[index];
+                old_index = index;
             }
-    
-            console.log(`randomArray([${array}], ${count}) -> [${random_array}]`)
-        }
-        else
-        {
-            alert(error);
         }
         
+        return random_array
     }
+    else
+    { 
+        alert(error);
+    }
+        
+}
 
 
 
 switch(result){
 
     case 1:
-        convertSpeed(36, "toMS");
-        convertSpeed(36, "toKMH");
+        console.log(`convertSpeed(${36}, ${"toKMH"}) -> ${speed}`)
+        console.log(`convertSpeed(${36}, ${"toMS"}) -> ${speed}`)
         break;
         
     case 2:
-        absValue(-2);
-        absValue(100);
+        console.log(`abs(-2) -> ${absValue(-2)}`);
+        console.log(`abs(100) -> ${absValue(100)}`);
         break;
 
     case 3:
@@ -74,12 +79,14 @@ switch(result){
         break
     
     case 4:
-        randomNumber(0, 10);
+        console.log(`randomNumber(0, 10) -> ${randomNumber(0, 10)}`);
         break
     
     case 5:
 
-        randomArray([1,2,3 ,4 ,5], 3)
+        array = [1, 2, 3, 4, 5]
+        count = 3
+        console.log(`randomArray([${array}], ${count}) -> [${randomArray(array, count)}]`)
         break;
     default:
         break;    
