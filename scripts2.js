@@ -75,6 +75,9 @@ switch(result){
             last_name: "Иванов",
             first_name: "Иван"
         }; 
+
+        key = Object.keys(student)
+        console.log(`Список свойств: ${key}`)
         console.log(`Студент ${student.first_name } ${student.last_name} учится в ${student.group} группе`)  
         break
     
