@@ -30,7 +30,7 @@ function absValue(value) {
 
 function randomNumber(min, max) {
 
-    return Math.floor(Math.random() * (max - min) + min)
+    return Math.trunc(Math.random() * (max - min) + min)
 }
 
 function randomArray(array, count) {
@@ -41,8 +41,8 @@ function randomArray(array, count) {
 
     if (count <= array.length) {
         for (k = 0; k < count; k++) {
-            index = randomNumber(0, count-1);
-            if (old_index != index) {
+            index = randomNumber(0, array.length-1);
+            if (index != old_index) {
                 random_array[k] = array[index];
                 old_index = index;
             }
