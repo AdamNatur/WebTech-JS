@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Fredoka+One&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <button id="callerButton" class="chat_button glass">Form</button>
+    </header>
+
+    <main>
+      <div id="mainDiv" class="mainDiv">
+        <div id="formModal" class="formBox glassMain">
+          <form
+            id="form"
+            class="form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
+            <label class="input-label"
+              ><span class="input-title">E-mail</span>
+              <input
+                id="inputMail"
+                class="input inputMail"
+                placeholder="E-mail"
+                type="email"
+                name="mail"
+                required
+              />
+            </label>
+            <div id="error" class="errorDiv">
+              <img src="img/error.svg" class="errorImage" width="20px" /><span
+                id="errorText"
+                >Let's start!</span
+              >
+            </div>
+            <label class="input-label"
+              ><span class="input-title">Password</span>
+              <input
+                id="inputPassword"
+                class="input inputPassword"
+                placeholder="Password"
+                type="password"
+                name="Password"
+                minlength="6"
+                required
+              />
+            </label>
+          </form>
+        </div>
+        <div class="container">
+          <div class="btn-holder">
+            <button id="showButton" class="showButton"> Show        
+            </button>
+            <input
+              type="submit"
+              form="form"
+              id="loginButton"
+              class="loginButton"
+              value="Login"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
